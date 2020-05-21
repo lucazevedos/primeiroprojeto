@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+/*reset css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, black, rgb(102, 101, 101));
+    background-size: 100% 100%;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-repeat: no-repeat;
+   
+}
+/*Se a tela tiver pelo menos 400px vai carregar esses estilos*/
+@media (min-width: 400px){
+    body {
+        font-size: 18px;
+    }
+}
+@media (min-width: 600px){
+    body {
+        font-size: 24px;
+    }   
+}
+@media (min-width: 1000px){
+    body {
+        font-size: 30px;
+    }   
+}
+@media (min-width: 1200px){
+    body {
+        font-size: 38px;
+    }   
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.menu{
+    background-color: none; 
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+  
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+  
+.menu li{
+    list-style: none;
+    font-family: 'Special Elite', cursive;
+}
+  
+.menu a{
+    display: block;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+}
+
+.menu a:hover{
+    background-color: rgba(70, 70, 70, 0.842);
+    transition: background-color 2s;
+}
+
+a{
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+}
+  
+.titulo{
+    transform: scale(0.5) translateY(50vh);
+    opacity: .3;
+    animation: linear 2s animacaoTitulo forwards 1;
+}
+
+@keyframes animacaoTitulo{
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.site-title, .site-subtitle{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: auto;
+ 
+}
+  
+.site-subtitle{
+    font-family: 'Righteous', cursive;
+    font-style: italic;
+    margin: 2px;
+}
+
+
+.img-portfolio{
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+    transition: transform, 1s;
+}
+
+.nome{
+    font-size: 1.2em;
+    text-shadow: white 2px 2px 2px;
+    text-decoration: none;
+}
+h3 .grid{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+/*Botão do instagram*/
+.grid button{
+    position: relative;
+    height: 40px;
+    width: 150px;
+    margin: 0 15px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #111;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: 'Teko', sans-serif;
+}
+@media(min-width: 600px){
+    .grid button{
+        position: relative;
+        height: 60px;
+        width: 200px;
+        font-size: .2em;
+        }
+}
+.grid button:first-child:hover{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+
+.grid button:last-child:hover{
+    background: linear-gradient(90deg, #022a97, #F5ce62, #e43603, #fa7199);
+    background-size: 400%;
+}
+.grid button:first-child:before,
+.grid button:last-child:before{
+    content: '';
+    position: relative;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transform: opacity .5s;
+}
+
+.grid button:hover:first-child:before,
+.grid button:hover:last-child:before{
+    opacity: 1;
+    z-index: -1;
+}
+.grid button:hover{
+    z-index: 1;
+    animation: glow 8s linear infinite;
+}
+@keyframes glow{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+
+.perfil{
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
+    margin: 100px;
+}
+.img-portfolio{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin-left: 70px;
+}
+@media(min-width: 600px){
+    .img-portfolio{
+        position: relative;
+        height: 80px;
+        width: 80px;
+    }
+}
+.img-portfolio:hover{
+    transform: scale(1) rotate(360deg);
+}
+
+
+.contato h2{
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: black 3px 3px 3px;
+}
+
+.contato .icones{
+    text-align: center;
+  
+}
+.contato a:hover{
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.842) ;
+    transition: text-shadow 1s;
+}
+.contato a{
+    color: #fff;
+    font-size: 2em;
+    padding: 8px;
+    text-shadow: black 3px 3px 3px;
+}
+
+.contato a:active{
+    text-shadow: 0px 0px 10px red;
+}
+
+.informacao .grid{
+    display: grid;
+    gap: 1em;
+    text-align: center;
+    grid-template-columns: 340px;
+    margin-bottom: 80px;
+}
+@media(min-width: 600px){
+    .informacao .grid{
+        grid-template-columns: 290px 290px;
+    }
+}
+@media(min-width: 800px){
+    .informacao .grid{
+        grid-template-columns: 400px 400px;
+    }
+}
+@media(min-width: 1000px){
+    .informacao .grid{
+        grid-template-columns: 500px 500px;
+    }
+}
+@media(min-width: 1500px){
+    .informacao .grid{
+        grid-template-columns: 900px 900px;
+    }
+}
+
+.info{
+    /*height: 120px;
+    width: 250px;*/
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    transition: opacity 3s;
+    margin-left: 10px;
+}
+.info:hover{
+    
+    opacity: 0;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.842) ;
+    transition: text-shadow 1s;
+}
+
+@media(min-width: 600px){
+    .info{
+        height: 150px;
+        width: 280px;
+    }
+}
+@media(min-width: 800px){
+    .info{
+        height: 180px;
+        width: 310px;
+    }
+}
+@media(min-width: 1000px){
+    .info{
+        height: 300px;
+        width: 500px;
+    }
+}
+@media(min-width: 1500px){
+    .info{
+        height: 300px;
+        width: 500px;
+    }
+}
